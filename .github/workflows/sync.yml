@@ -1,0 +1,9 @@
+name: sync
+on: [push, schedule]
+schedule:
+  - cron: "*/15 * * * *"
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "beacon $(date)" 
